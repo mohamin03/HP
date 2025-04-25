@@ -563,14 +563,21 @@
     <h2>お問い合わせ</h2>
     <p>ご依頼・ご相談など、お気軽にご連絡ください。</p>
 
-    <!-- 🔽 form.run の埋め込みコード -->
-    <script src="https://sdk.form.run/js/v2/embed.js"></script>
+    <!-- 🔽 formrun埋め込み -->
+    <div id="formrun-embed"></div>
+    <script>
+      (function(d, s) {
+        var js = d.createElement(s);
+        js.src = "https://sdk.form.run/js/v2/embed.js";
+        var fjs = d.getElementsByTagName(s)[0];
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script");
+    </script>
     <div
       class="formrun-embed"
       data-formrun-form="@wanriben-InBbeyiJS4lyu4IIykAQ"
       data-formrun-redirect="true">
     </div>
-
   </div>
 </section>
 
