@@ -563,16 +563,18 @@
     <h2>お問い合わせ</h2>
     <p>ご依頼・ご相談など、お気軽にご連絡ください。</p>
 
-    <!-- 🔽 formrun 埋め込みコード（スクリプト＋埋め込みdiv） -->
-  <script src="https://sdk.form.run/js/v2/embed.js"></script>
-<div
-  class="formrun-embed"
-  data-formrun-form="@wanriben-InBbeyiJS4lyu4IIykAQ"
-  data-formrun-redirect="true">
-</div>
+    <form class="contact-form" action="https://formsubmit.io/send/wanriben@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="お名前" required>
+      <input type="email" name="email" placeholder="メールアドレス" required>
+      <textarea name="message" placeholder="お問い合わせ内容" required></textarea>
+      <button type="submit">送信する</button>
 
+      <!-- 迷惑メール防止用（消さないでOK） -->
+      <input type="hidden" name="_captcha" value="false">
+    </form>
   </div>
 </section>
+
 
 
   </div>
