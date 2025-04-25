@@ -415,6 +415,50 @@
   scroll-margin-top: 100px;
 }
 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: sans-serif;
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 14px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #333;
+}
+
 
 
 　スタイルおわり！！
@@ -563,16 +607,27 @@
 
 <!-- 🔽 正しく中央に配置されるお問い合わせフォーム -->
 <!-- 🔽 正しく中央に配置されるお問い合わせフォーム -->
-<!-- 🔽 正しく中央に配置されるお問い合わせフォーム -->
 <section id="contact" class="contact">
   <div class="contact-wrapper">
     <h2>お問い合わせ</h2>
     <p>ご依頼・ご相談など、お気軽にご連絡ください。</p>
 
     <form class="contact-form" action="https://formspree.io/f/mldbddyq" method="POST">
-      <input type="text" name="name" placeholder="お名前" required>
-      <input type="email" name="email" placeholder="メールアドレス" required>
-      <textarea name="message" placeholder="お問い合わせ内容" required></textarea>
+      <div class="form-group">
+        <label for="name">お名前</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">メールアドレス</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">お問い合わせ内容</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+
       <button type="submit">送信する</button>
     </form>
   </div>
